@@ -225,7 +225,7 @@ Kubernetes doesn't allow you to specify CPU resources with a precision finer tha
 the milliCPU form; for example, `5m` rather than `0.005`.
 -->
 Kubernetes 不允许设置精度小于 `1m` 的 CPU 资源。
-因此，当 CPU 单位小于 `1` 或 `1000m` 时，使用毫核的形式是有用的；
+因此，当 CPU 单位小于 `1` 或 `1000m` 时，指定以毫核为单位会更有用；
 例如 `5m` 而不是 `0.005`。
 {{< /note >}}
 
@@ -271,7 +271,7 @@ MiB of memory, and a limit of 1 CPU and 256MiB of memory.
 -->
 ## 容器资源示例     {#example-1}
 
-以下 Pod 有两个容器。每个容器的请求为 0.25 CPU 和 64MiB（2<sup>26</sup> 字节）内存，
+以下 Pod 有两个容器。每个容器的资源请求为 0.25 CPU 和 64MiB（2<sup>26</sup> 字节）内存，
 每个容器的资源约束为 0.5 CPU 和 128MiB 内存。
 你可以认为该 Pod 的资源请求为 0.5 CPU 和 128 MiB 内存，资源限制为 1 CPU 和 256MiB 内存。
 
